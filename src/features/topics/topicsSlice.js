@@ -10,8 +10,9 @@ export const topicsSlice = createSlice({
   reducers: {
     addTopic: (state, action) => {
       console.log(action.payload);
-      state.topicsByName[action.payload.toLowerCase()] = {
-        name: action.payload.toLowerCase(),
+      state.topicsByName[action.payload.name.toLowerCase()] = {
+        name: action.payload.name.toLowerCase(),
+        icon: action.payload.icon,
         quizIds: []
       }
     }
