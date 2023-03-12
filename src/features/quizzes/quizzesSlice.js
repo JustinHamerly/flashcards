@@ -12,6 +12,9 @@ export const quizzesSlice = createSlice({
       const newQuiz = action.payload;
       state.quizzesById[newQuiz.id] = newQuiz
     },
+    removeQuizById: (state, action) => {
+      delete state.quizzesById[action.payload];
+    }
   }
 })
 
@@ -21,7 +24,8 @@ export const getQuizzes = (state) => state.quizzes.quizzesById;
 
 //actions object export
 export const {
-  addNewQuiz
+  addNewQuiz,
+  removeQuizById
 } = quizzesSlice.actions;
 
 //reducer export
