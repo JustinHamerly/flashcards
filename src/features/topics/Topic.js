@@ -7,7 +7,7 @@ export default function Topic() {
   const topics = useSelector(getTopics)
   const quizzes = {}
   let { topicId } = useParams();
-  const topic = topics[topicId];
+  const topic = topics[topicId] ? topics[topicId] : {name: 'no quizzes', icon: '', quizIds:[]};
   const quizzesForTopic = topic.quizIds.map((quizId) => quizzes[quizId]);
 
   return (
