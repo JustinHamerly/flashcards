@@ -15,7 +15,7 @@ export default function NewTopicForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name) return;
-    dispatch(addTopic(name))
+    dispatch(addTopic({name, icon}))
     history.push(ROUTES.topicsRoute());
   };
 

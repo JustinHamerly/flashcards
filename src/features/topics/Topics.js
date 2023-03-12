@@ -1,4 +1,3 @@
-import NewTopicForm from "../../components/NewTopicForm";
 import { Link } from "react-router-dom";
 import ROUTES from "../../app/routes";
 import { useSelector } from "react-redux";
@@ -15,7 +14,7 @@ export default function Topics() {
         <ul className="topics-list">
           {Object.values(topics).map((topic, i) => (
             <li className="topic" key={i}>
-              <Link to={ROUTES.topicRoute(topic.id)} className="topic-link">
+              <Link to={ROUTES.topicRoute(topic.name)} className="topic-link">
                 <div className="topic-container">
                   <img src={topic.icon} alt="" />
                   <div className="text-content">
