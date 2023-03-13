@@ -5,7 +5,6 @@ import { getTopics } from "./topicsSlice";
 
 export default function Topics() {
   const topics = useSelector(getTopics);
-  console.log('topics: ', topics)
 
   return (
     <section className="center">
